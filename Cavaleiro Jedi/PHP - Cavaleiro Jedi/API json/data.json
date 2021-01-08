@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Guilherme",
+        "idade": 19,
+        "cargo": "Monitor",
+        "gostaDeProgramar": true,
+        "cor": null,
+        "tecnologias": [
+            "PHP",
+            "React",
+            "MySQL"
+        ]
+    },
+    {
+        "nome": "José"
+    }
+]

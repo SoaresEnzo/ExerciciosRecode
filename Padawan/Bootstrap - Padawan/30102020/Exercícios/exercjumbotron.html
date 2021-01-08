@@ -1,0 +1,45 @@
+<!--
+Criar um arquivo .html.
+Criar uma página para fazer um layout utilizando o modelo jumbotron.
+No jumbotron deverá ter:
+Um título;
+Um dizer;
+Abaixo da estrutura do jumbotron deverá ter três colunas de tamanho igual e 
+cada uma com uma figura que tenha representatividade com o título e com os dizeres.
+
+15 minutos.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Jumbotron1</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid bg-info">
+            <h1 class="text-dark text-center display-4">Frameworks Front-End</h1>
+            <p class="lead text-center">Angular, React e Vue estão em alta hoje em dia.</p>
+            <div class="container bg-white">
+                <div class="row">
+                    <div class="col-4"><img class="img-fluid"
+                            src="https://repository-images.githubusercontent.com/24195339/87018c00-694b-11e9-8b5f-c34826306d36"
+                            alt=""></div>
+                    <div class="col-4"><img class="img-fluid" src="https://reactjs.org/logo-og.png" alt=""></div>
+                    <div class="col-4"><img class="img-fluid"
+                            src="data:image/png;base64,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"
+                            alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

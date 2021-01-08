@@ -1,0 +1,38 @@
+<!--
+    Fazer um programa para criar um array com 5 informações e através de uma estrutura de repetição,
+     remover apenas os elementos de índice ímpar.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio splice</title>
+    <script>
+        let marcas = ["Volvo", "BMW", "Honda", "Toyota", "Mercedes"]
+
+    
+        for (let i = 5; i > 0; i--) {
+            if (i % 2 != 0) {
+                marcas.splice(i, 1)
+            }
+            console.log(marcas)
+        }
+
+        let controle = 0;
+        for(let i=0; i<5; i++){
+            if((i-controle)%2!=0){
+                marcas.splice(i,1)
+                controle++
+            }
+            console.log(marcas)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

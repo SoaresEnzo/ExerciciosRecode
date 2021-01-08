@@ -1,0 +1,46 @@
+<!--
+    Fazer um programa para termos a opção de uma calculadora. Se o usuário escolher o +
+     o programa soma dois números e exibe. SE o usuário escolher o - 
+     o programa subtrai dois números e exibe. Se o usuário escolher 
+     * o programa multiplica dois números e exibe. Se o usuário escolher
+      / o programa divide dois números e exibe.
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch 2</title>
+    <script>
+        let valor1, valor2, operacao;
+        valor1 = parseInt(prompt("Insira o primeiro valor"));
+        valor2 = parseInt(prompt("Insira o segundo valor"));
+        operacao = prompt("Qual é a operação?('+','-','/' ou '*')");
+
+        switch(operacao){
+            case "+":
+            document.write("O seu resultado é "+(valor1+valor2));
+            break;
+            case "*":
+            document.write("O seu resultado é "+(valor1*valor2));
+            break;
+            case "-":
+            document.write("O seu resultado é "+(valor1-valor2));
+            break;
+            case "/":
+            document.write("O seu resultado é "+(valor1/valor2));
+            break;
+            default:
+            document.write("Siga as instruções com atenção")
+        }
+    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

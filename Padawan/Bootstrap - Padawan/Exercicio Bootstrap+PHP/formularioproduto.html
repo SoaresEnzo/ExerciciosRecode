@@ -1,0 +1,122 @@
+<!--
+    Criar uma tabela de nome produto
+	id  chave primária, not null e autoincremento;
+	nome  varchar (45)
+	caracteristica - varchar (15)
+	quantidade  int
+	peso 
+
+Criar um formulário formularioproduto.html
+O formulário deverá ter os seguintes campos:
+Nome - text;
+Característica – radiobutton;
+Quantidade – select;
+Peso – text
+
+Botão de envio das informações para o arquivo formrespproduto.php
+
+O arquivo formrespproduto.php deverá:
+Receber e visualiar as informações passadas pelo método post.
+Fazer a conexão com o banco de dados;
+Fazer o código do insert das informações para graver na tabela produto;
+Colocar uma opção para voltar para o formulário anterior;
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Formulário em Bootstrap</title>
+
+    <style>
+        .form {
+            margin-top: -4.4rem;
+            border: 1px solid #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-primary">
+        <h3 class="text-white text-center">Formulário de envio</h3>
+        <p class="text-center text-white lead">Insira os dados pedidos</p>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 form bg-white">
+            <form action="formrespproduto.php" class="was-validated" method="POST">
+                <h3>Seus dados</h3>
+                <hr>
+
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome" name="nome"
+                        required>
+                    <div class="valid-feedback">OK!</div>
+                    <div class="invalid-feedback">Digite seu nome</div>
+                </div>
+
+                <div class="form-group">
+                    <div class="custom-control custom-radio">
+
+                        <input class="custom-control-input" type="radio" name="caracteristica" id="alto" value="Alto">
+                        <label class="custom-control-label" for="alto">
+                            Alto
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="caracteristica" id="rapido"
+                            value="Rápido">
+                        <label class="custom-control-label" for="rapido">
+                            Rápido
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="caracteristica" id="forte" value="Forte">
+                        <label class="custom-control-label" for="forte">
+                            Forte
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="quantidade">Quantidade:</label>
+                    <select name="quantidade" class="custom-select" required>
+                        <option value="" selected disabled hidden>Selecione uma quantidade</option>
+                        <option value="1">Um</option>
+                        <option value="2">Dois</option>
+                        <option value="3">Três</option>
+                        <option value="4">Quatro</option>
+                    </select>
+                    <div class="valid-feedback">Ok!</div>
+                    <div class="invalid-feedback">Insira uma quantidade</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso:</label>
+                    <input type="number" class="form-control" id="peso" placeholder="Digite o seu peso" name="peso"
+                        required>
+                    <div class="valid-feedback">Ok!</div>
+                    <div class="invalid-feedback">Insira seu peso</div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </div>
+
+
+
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new student</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Adicionar um aluno</h1>
+        <form action="form1.php" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <br>
+            <br>
+            <p>Gênero:
+                <input type="radio" name="genero" value="Masculino" id="Masculino">
+                <label for="Masculino">Masculino</label>
+                <input type="radio" name="genero" value="Feminino" id="Feminino">
+                <label for="Feminino">Feminino</label>
+                <input type="radio" name="genero" value="Outro" id="Outro">
+                <label for="Outro">Outro</label>
+            </p>
+
+
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco">
+
+            <label for="cidade">Bairro</label>
+            <input type="text" name="bairro">
+
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade">
+
+            <label for="cep">CEP</label>
+            <input type="number" name="cep">
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar formulário">
+</body>
+
+</html>

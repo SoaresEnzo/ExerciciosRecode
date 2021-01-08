@@ -1,0 +1,37 @@
+<!--
+Quinta atividade:
+Fazer um programa para que o usuário digite um salário e o programa deverá calcular seu reajuste.
+Exibir mensagem com o valor do desconto.
+Salario <= 600 e sexo = “M”, aplicar desconto de 20%
+Salario <= 1200 e sexo = “F”, aplicar desconto de 20%
+Salario <= 2000 e sexo “M”, aplicar desconto de 25%
+Senão, desconto de 30% - ambos os sexos
+
+Fórmula: desconto = salario * 0.2 ou 0.25 ou 0.30;
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let salario = parseInt(prompt("Insira o valor do seu salário"));
+        let sexo = prompt("Qual o seu sexo?(M ou F)");
+        if ((salario <= 600 && sexo === "M") || (salario <= 1200 && sexo === "F")) {
+            alert("O desconto do seu salário é de " + (0.2 * salario));
+        } else if (salario <= 2000 && sexo === "M") {
+            alert("O desconto do seu salário é de " + (0.25 * salario));
+        } else {
+            alert("O desconto do seu salário é de " + (0.3 * salario));
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

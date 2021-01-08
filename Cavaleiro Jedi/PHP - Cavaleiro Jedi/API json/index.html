@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    Link Monitoria 26/11/2020: 
+    https://zoom.us/rec/play/DSzR3jZ9If_cCSAk8bKdpS66ZB4k6Wik_29L9qOHQ86PNAW_EX-CT47wJ33HQ8swuW4Eio4G6UIM4JU9.-1ayOkF22Dlkl3wS
+    Senha:
+    NjB=Ib5t
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de API</title>
+</head>
+
+<body>
+    <button onclick="getApi()">
+        Buscar usuários
+    </button>
+
+    <div id="users">
+
+    </div>
+
+
+    <ul id="lista-estados">
+
+    </ul>
+    <script>
+        /*
+        function getStates() {
+            const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
+            fetch(url)
+                .then(response => response.json())
+                .then(dados => {
+                    let ul = document.getElementById("lista-estados")
+                    //for (let i = 0; i < dados.length; i++) {
+                    //    ul.innerHTML +=`<li>${dados[i].nome}</li>`
+                    //}
+
+                    //for(dado of dados){
+                    //    ul.innerHTML += `<li>${dado.nome}</li>`
+                    //}
+
+                    dados.map((dado) => {
+                        ul.innerHTML += `<li>${dado.nome}</li>`
+                    })
+                })
+        }
+        */
+
+        async function getApi(){
+            const url = "https://api.github.com/users";
+            const response = await fetch(url);
+            const dados = await response.json();
+
+            let div = document.getElementById('users')
+            
+            dados.map((dado)=>{
+                div.innerHTML +=`<img src="${dado.avatar_url}" width="200"">`
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>

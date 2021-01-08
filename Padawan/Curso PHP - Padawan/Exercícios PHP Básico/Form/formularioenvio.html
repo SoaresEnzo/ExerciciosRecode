@@ -1,0 +1,63 @@
+<!--
+    Criar um arquivo html de nome formularioenvio.htmlCriar uma tag <form> para que o usuário informe 
+    os seguintes dados:	nome (texto)	senha (texto)	gênero (radio button)	turno (checkbox)	
+    cidade (select)	botão enviar (botão)Após a digitação das informações, 
+    as mesmas devem ser enviadas via método POST para o arquivo php de nome formularioresposta.php possa 
+    receber as informações e fazer a exibição das mesmas.
+    Além do botão enviar, colocar o botão de limpar "reset".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de dados</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="formularioresposta.php" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+            <br>
+            <br>
+            <label for="">Senha</label>
+            <input type="password" name="senha">
+
+            <p>Gênero:
+                <input type="radio" name="genero" value="Masculino" id="Masculino">
+                <label for="Masculino">Masculino</label>
+                <input type="radio" name="genero" value="Feminino" id="Feminino">
+                <label for="Feminino">Feminino</label>
+                <input type="radio" name="genero" value="Outro" id="Outro">
+                <label for="Outro">Outro</label>
+            </p>
+
+
+            <p>Turno:
+                <input type="checkbox" value="Matutino" name="turno[]">
+                <label for="manha">Matutino</label>
+                <input type="checkbox" value="Vespertino" name="turno[]">
+                <label for="tarde">Vespertino</label>
+                <input type="checkbox" value="Noturno" name="turno[]">
+                <label for="noite">Noturno</label>
+            </p>
+
+            <label for="cidade">Cidade</label>
+            <select name="cidade" id="cidade">
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Belo Horizonte">Belo Horizonte</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar formulário">
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!--
+Criar um arquivo HTML de nome docwrite1.html.
+Criar três tags de h1, h2 e h3; e
+Em cada uma das tags, colocar uma mensagem com o uso do document.write.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício JS</title>
+    <script>
+        function a(){
+            document.getElementById("a").innerHTML="Aqui tem um h1"
+            document.getElementById("b").innerHTML="Aqui tem um h2"
+            document.getElementById("c").innerHTML="Aqui tem um h3"
+
+            document.getElementsByTagName("h1")[1].innerHTML = "Se você está vendo isso, deu certo"
+        }
+
+        function b(obj){
+            obj.style.backgroundColor = #fdfdff
+        }
+    </script>
+</head>
+<body onload="a()">
+    <h1 id="a"></h1>
+    <h2 id="b"></h2>
+    <h3 id="c"></h3>
+</body>
+</html>

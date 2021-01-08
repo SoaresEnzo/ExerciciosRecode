@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function funcSomar(valor1, valor2) {
+            let parte1 = parseInt(valor1)
+            let parte2 = parseInt(valor2)
+            alert("O resultado da soma é " + (parte1 + parte2))
+        }
+    </script>
+    <style>
+        div {
+            display: inline-block;
+        }
+
+        label {
+            font-weight: bolder;
+        }
+
+        input {
+            border-radius: 20px;
+            margin-bottom: 10px;
+            border-color: black;
+            height: 20px;
+            width: 100%;
+        }
+
+        button {
+            background-color: black;
+            color: red;
+            display: block;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="valor1">Primeiro Valor</label>
+        <input type="text" name="valor1" id="val1">
+        <br>
+        <label for="valor2">Segundo Valor</label>
+        <input type="text" name="valor2" id="val2">
+        <br>
+        <button onclick="funcSomar(val1.value,val2.value)">Somar</button>
+    </div>
+</body>
+
+</html>

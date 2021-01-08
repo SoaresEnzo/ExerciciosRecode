@@ -1,0 +1,27 @@
+<!--
+Terceira atividade:
+Fazer um programa para que o usuário digite um número e o programa verifique se o número é múltiplo de 2
+ou de 5 ou de 10. Exibir mensagem. “numero e multiplo”, caso contrário “numero invalido.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let numeroDigitado = parseInt(prompt("Digite um número e o programa vai verificar se é múltiplo de 2, 5 ou 10."));
+        if (numeroDigitado % 2 === 0 || numeroDigitado % 5 === 0 || numeroDigitado % 10 === 0) {
+            alert("O número é múltiplo de 2, 5 ou 10.");
+        } else {
+            alert("Número inválido.");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

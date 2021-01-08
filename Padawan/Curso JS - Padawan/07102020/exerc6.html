@@ -1,0 +1,31 @@
+<!--
+    Criar um primeiro prompt para entrada do valor numérico;
+    Criar um segundo prompt para entrada de outro valor numérico;
+    Testar qual o maior valor;
+    Exibir uma mensagem com o maior valor.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let valor1 = parseInt(prompt("Insira o primeiro valor"));
+        let valor2 = parseInt(prompt("Insira o segundo valor"));
+        if (valor1 > valor2) {
+            alert("O valor " + valor1 + " é maior que o valor " + valor2 + ".");
+        } else if (valor2 > valor1) {
+            alert("O valor " + valor2 + " é maior que o valor " + valor1 + ".");
+        } else if (valor2 === valor1) {
+            alert("Os valores são iguais.");
+        } else {
+            alert("Os parâmetros tem de ser números.");
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!--
+Crie um cabeçalho com o jumbotron;
+É preciso ter uma imagem de fundo;
+É preciso ter um título;
+É preciso ter uma texto;
+Abaixo do cabeçalho do jumbotron:
+Inserir uma mensagem de sucesso;
+Inserir uma mensagem de atenção;
+Inserir uma mensagem de perigo;
+15 minutos.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Jumbotron+alert</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid" style="background-image: url(.//Diamond-Sunset.svg);">
+        !--/* background by SVGBackgrounds.com */-->
+        <h1 class="text-white text-center display-4">Alertas com Bootstrap</h1>
+        <p class="lead text-center text-white">Criando alertas com botões para removê-los da tela</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Ótimo!</strong> Esse alerta significa um resultado positivo!
+        </div>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Perigo!</strong> Se você está vendo esse alerta, algo ruim aconteceu.
+        </div>
+        <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Cuidado!</strong> Este alerta te informa de algo que precisa de cautela.
+        </div>
+    </div>
+</body>
+
+</html>

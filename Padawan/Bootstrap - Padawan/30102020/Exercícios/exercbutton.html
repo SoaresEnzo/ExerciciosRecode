@@ -1,0 +1,58 @@
+<!--
+Criar um arquivo .html.
+Crie um cabeçalho com o jumbotron;
+É preciso ter uma imagem de fundo;
+É preciso ter um título;
+É preciso ter uma texto;
+É preciso ter um botão para fazer envio de informação
+Abaixo do cabeçalho do jumbotron:
+Será preciso criar uma função com o uso da tag <script> e usar getelementbyid;
+Será preciso usar DOM;
+Exibir uma mensagem;
+-->
+
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function msg_resposta() {
+            let target = document.getElementById('output')
+            target.innerHTML = `
+           <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Feito!</strong> Seus dados foram enviados com sucesso!
+        </div>`
+        }
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Button+JS</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-primary" style="background-image: url(./Dragon-Scales.svg);">
+        !--/* background by SVGBackgrounds.com */-->
+        <h1 class="text-center text-white display-4">
+            Envio de Dados
+        </h1>
+        <p class="text-center text-white lead">
+            Já inseriu seus dados, só falta enviar, confirma?
+        </p>
+        <div class="row justify-content-center pt-4">
+            <div class="col-auto">
+                <div class="btn btn-lg btn-outline-warning" onclick="msg_resposta()">
+                    Clique aqui
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="output">
+    </div>
+</body>
+
+</html>

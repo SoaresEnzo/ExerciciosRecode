@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="primeiro teste">Primeiro elemento da classe="primeiro teste".</div>
+    
+    <div class="primeiro teste">Segundo elemento da classe="segundo teste".</div>
+    
+    <p class="paragrafo">Clique no botão para o teste do primeiro elemento da classe="primeiro teste“ (índice 0)</p>
+    
+    <button onclick="myFunction()">Clique aqui!</button>
+    
+    <script>
+        function myFunction() {
+        var y = document.getElementsByClassName("primeiro teste");
+        y[0].innerHTML = "Alterou a primeira frase";
+        
+        var x = document.getElementsByClassName("paragrafo");
+        x[0].innerHTML = "Alterou o paragrafo";
+        }
+    </script>
+</body>
+</html>

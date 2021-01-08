@@ -1,0 +1,41 @@
+<!--
+    Criar um programa onde haja a criação de dois títulos e dois parágrafos. Na sequencia deverá ter um botão
+     para apagar um título e um parágrafo e outro botão para que os parágrafos que foram apagados possam ser
+      visualizados novamente.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".hide").click(() => {
+                $(".variante").hide()
+            });
+
+            $(".show").click(() => {
+                $(".variante").show()
+            }
+
+            )
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h1 class="variante">Métodos ágeis</h1>
+    <h1>SCRUM</h1>
+    <p class="variante">Desenvolvimento Ágil de Software (em inglês: Agile software development) ou Método ágil é uma disciplina que
+        estuda um conjunto de comportamentos, processos, práticas e ferramentas utilizados para a criação de produtos
+        (geralmente de, mas não limitados a, software) e sua subsequente disponibilização para os usuários finais.</p>
+    <p>O Scrum é um framework de gerenciamento de projetos, da organização ao desenvolvimento ágil de produtos complexos
+        e adaptativos com o mais alto valor possível, através de várias técnicas, utilizado desde o início de 1990 e que
+        atualmente é utilizado em mais de 60% dos projetos ágeis em todo o mundo. </p>
+    <button class="hide">Clique aqui para esconder os paragrafos</button>
+    <button class="show">Clique aqui para mostrar os paragrafos</button>
+</body>
+
+</html>

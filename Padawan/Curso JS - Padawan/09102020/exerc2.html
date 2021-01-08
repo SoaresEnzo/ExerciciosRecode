@@ -1,0 +1,27 @@
+<!--
+    fazer um programa para criar de forma manual um array com 9 elementos onde o último índice será de 
+    valor oito. É preciso saber a quantidade total de elementos do array para que o programa possa excluir
+     o elemento do meio. 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício length</title>
+    <script>
+        let elementos = [1,2,3,4,5,6,7,8,9]
+        console.log (elementos)
+        if(elementos.length % 2 !=0)
+        {
+            let meio = (elementos.length/2)-0.5;
+            elementos.splice(meio,1)
+            console.log(elementos)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
