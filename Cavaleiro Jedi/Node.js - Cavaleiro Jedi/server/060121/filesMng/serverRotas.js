@@ -4,19 +4,21 @@ var fs = require('fs')
 var server = http.createServer((req, res) => {
     var url = req.url
     switch (url) {
-        case '/artigos':
+        case '/':
             fs.readFile(__dirname + '/artigos.html', (error, html) => {
                 res.end(html)
             })
             break;
-        case '/contatos':
-            fs.readFile(__dirname + '/contatos.html', (error, html) => {
-                res.end(html)
-            })
-            break;
         default:
-            fs.readFile(__dirname + '/erro.html', (error, html) => {
-                res.end(html)
+            fs.readFile(__dirname + url + '.html', (error, html) => {
+                if(error){
+                    fs.readFile(__dirname + '/erro.html',(error, html) => {
+                        res.end(html)
+                    });
+                    console.log(error.errno)
+                } else {
+                    res.end(html)
+                }
             })
             break;
     }
